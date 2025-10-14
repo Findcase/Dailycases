@@ -3,43 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FindCase | Case Library</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Explore Cases - FindCase</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f7f7f7; }
+    h1 { text-align: center; margin-bottom: 30px; color: #333; }
+    .accordion { background: #fff; margin-bottom: 10px; border-radius: 5px; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .accordion-btn { width: 100%; text-align: left; padding: 15px; font-size: 16px; border: none; background: #4CAF50; color: white; cursor: pointer; border-radius: 5px; margin-bottom: 5px; }
+    .accordion-btn.active { background: #45a049; }
+    .accordion-content { display: none; padding: 10px; background: #f9f9f9; border-radius: 5px; }
+    ul { padding-left: 20px; }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>FindCase</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="cases.html">Explore Cases</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
+  <h1>Explore Daily Case Studies</h1>
 
-  <main>
-    <section class="case-list">
-      <h2>Explore Business & Marketing Case Studies</h2>
-      <p class="intro">New challenges are added daily — analyze, strategize, and improve your problem-solving skills.</p>
+  <!-- Case 1 -->
+  <div class="accordion">
+    <button class="accordion-btn">Case 1: Liquidity Crunch at Apex FinServe</button>
+    <div class="accordion-content">
+      <p><strong>Domain:</strong> Finance – Beginner</p>
+      <p>Apex FinServe’s cash reserves dipped below regulatory thresholds due to delayed loan repayments. How can it restore liquidity in 3 months?</p>
+      <p><strong>Key Data/Facts:</strong></p>
+      <ul>
+        <li>Outstanding loan portfolio: ₹120 crore</li>
+        <li>Average loan repayment delay: 45 days</li>
+        <li>Current cash reserve shortfall: ₹15 crore</li>
+        <li>Cost of incremental borrowing: 11% p.a.</li>
+        <li>Regulatory minimum reserve requirement: 20% of outstanding loans</li>
+      </ul>
+      <p><strong>Suggested Tasks/Questions:</strong> Analyze root causes, propose funding, design cash-flow forecast, recommend policy changes.</p>
+    </div>
+  </div>
 
-      <!-- Example Case 1 -->
-      <article class="case-card">
-        <h3>Gemini's Next Chapter: Navigating Trust and Growth</h3>
-        <p>After recovering from the Genesis crisis, Gemini must now rebuild trust and reignite retail user growth while staying true to its security-first philosophy.</p>
-        <a class="btn" href="https://docs.google.com/" target="_blank">View Full Case</a>
-      </article>
+  <!-- Case 2 -->
+  <div class="accordion">
+    <button class="accordion-btn">Case 2: Rebranding SparkLeap Sports Drink</button>
+    <div class="accordion-content">
+      <p><strong>Domain:</strong> Marketing – Lower Intermediate</p>
+      <p>SparkLeap needs strategies to increase market penetration and improve brand perception among 18–25-year-olds.</p>
+      <ul>
+        <li>Annual marketing budget: ₹50 million</li>
+        <li>Urban youth brand awareness: 65%</li>
+        <li>Purchase conversion among aware consumers: 12%</li>
+        <li>Top competitor’s market share: 28% vs SparkLeap 18%</li>
+        <li>Digital ad ROI: ₹1.8 per ₹1 spent</li>
+      </ul>
+      <p><strong>Suggested Tasks/Questions:</strong> Segment audience, propose campaign plan, evaluate influencers, outline metrics.</p>
+    </div>
+  </div>
 
-      <!-- Example Case 2 -->
-      <article class="case-card">
-        <h3>Future Case Title Here</h3>
-        <p>This is where your next case will appear. You can add a short summary and link to the full case document.</p>
-        <a class="btn" href="#" target="_blank">Coming Soon</a>
-      </article>
-    </section>
-  </main>
+  <!-- Case 3 -->
+  <div class="accordion">
+    <button class="accordion-btn">Case 3: Assembly Line Bottlenecks at Harita Motors</button>
+    <div class="accordion-content">
+      <p><strong>Domain:</strong> Operations – Intermediate</p>
+      <p>Harita Motors’ assembly line throughput dropped 15%. How to identify and remove bottlenecks?</p>
+      <ul>
+        <li>Target daily output: 500 engines</li>
+        <li>Current daily output: 425 engines</li>
+        <li>Average cycle time per unit: 5.6 minutes</li>
+        <li>Overtime labor cost premium: 1.5×</li>
+        <li>Unplanned downtime: 3 events/week</li>
+      </ul>
+      <p><strong>Suggested Tasks/Questions:</strong> Map value stream, root-cause analysis, recommend lean techniques, calculate break-even for overtime reduction.</p>
+    </div>
+  </div>
 
-  <footer>
-    <p>© 2025 FindCase | Daily Cases for Learning and Growth</p>
-  </footer>
+  <!-- Case 4 -->
+  <div class="accordion">
+    <button class="accordion-btn">Case 4: Legacy ERP Upgrade for GlobeTech Solutions</button>
+    <div class="accordion-content">
+      <p><strong>Domain:</strong> IT Strategy – Upper Intermediate</p>
+      <p>GlobeTech’s 15-year-old ERP needs migration/upgrading with minimal disruption.</p>
+      <ul>
+        <li>ERP users: 200</li>
+        <li>Annual maintenance: ₹30 million</li>
+        <li>Upgrade budget: ₹80–100 million</li>
+        <li>Data volume: 10 TB, +20% annually</li>
+        <li>Go-live window: 8 weeks</li>
+      </ul>
+      <p><strong>Suggested Tasks/Questions:</strong> Compare migration approaches, identify success factors, draft communication plan, estimate TCO.</p>
+    </div>
+  </div>
+
+  <!-- Case 5 -->
+  <div class="accordion">
+    <button class="accordion-btn">Case 5: Last-Mile Delivery Optimization for QuickShip</button>
+    <div class="accordion-content">
+      <p><strong>Domain:</strong> Logistics – Advanced</p>
+      <p>QuickShip wants to improve last-mile delivery and reduce cost by 10%.</p>
+      <ul>
+        <li>On-time rate: 85%</li>
+        <li>Average cost per parcel: ₹55</li>
+        <li>Daily parcels: 20,000</li>
+        <li>Customer satisfaction: 3.8/5</li>
+        <li>Fuel surcharge: ₹8 per parcel</li>
+      </ul>
+      <p><strong>Suggested Tasks/Questions:</strong> Analyze delivery zones, evaluate redesign options, cost-benefit analysis, propose KPIs.</p>
+    </div>
+  </div>
+
+  <!-- Case 6 -->
+  <div class="accordion">
+    <button class="accordion-btn">Case 6: Supply-Chain Resilience at PharmaCore</button>
+    <div class="accordion-content">
+      <p><strong>Domain:</strong> Supply Chain Strategy – Expert</p>
+      <p>PharmaCore faces supplier risks. How to build supply-chain resilience?</p>
+      <ul>
+        <li>Annual API demand: 5M units</li>
+        <li>Lead time: 12–16 weeks</li>
+        <li>Safety stock: 8 weeks</li>
+        <li>Alternative supplier qualification: 24 weeks</li>
+        <li>Cost increase for dual-sourcing: 4%</li>
+      </ul>
+      <p><strong>Suggested Tasks/Questions:</strong> Risk assessment, sourcing strategy comparison, inventory policies, contingency plan.</p>
+    </div>
+  </div>
+
+  <!-- Case 7 -->
+  <div class="accordion">
+    <button class="accordion-btn">Case 7: Turnaround Strategy for Horizon Retail</button>
+    <div class="accordion-content">
+      <p><strong>Domain:</strong> General Strategy – Expert</p>
+      <p>Horizon Retail needs a turnaround plan after 5 quarters of losses.</p>
+      <ul>
+        <li>Store count: 150</li>
+        <li>Same-store sales decline: 12% YoY</li>
+        <li>EBITDA margin: –4%</li>
+        <li>E-commerce: 18% of total sales</li>
+        <li>Capex budget: ₹200 million</li>
+      </ul>
+      <p><strong>Suggested Tasks/Questions:</strong> SWOT analysis, identify initiatives, phased implementation, establish performance tracking.</p>
+    </div>
+  </div>
+
+  <script>
+    const acc = document.querySelectorAll('.accordion-btn');
+    acc.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        const content = btn.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
 </body>
 </html>
-S
