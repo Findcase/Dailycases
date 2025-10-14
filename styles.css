@@ -7,25 +7,30 @@
 }
 
 body {
-  background-color: #f8f9fc;
-  color: #333;
+  background-color: #f0f4f8; /* softer, modern background */
+  color: #2b2b2b;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 /* ---------- Header ---------- */
 header {
-  background: #1e1e2f;
+  background: #0f1a2b; /* deep trendy navy */
   color: #fff;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header h1 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   letter-spacing: 1px;
+  color: #ffd369; /* subtle accent */
 }
 
 nav a {
@@ -33,7 +38,24 @@ nav a {
   margin-left: 1.5rem;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #ffd369;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 nav a:hover {
@@ -47,81 +69,117 @@ nav a:hover {
   background: linear-gradient(135deg, #4e54c8, #8f94fb);
   color: #fff;
   border-radius: 0 0 25px 25px;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero h2 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.25);
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .btn {
   background-color: #ffd369;
-  color: #333;
-  padding: 0.8rem 1.8rem;
+  color: #0f1a2b;
+  padding: 0.9rem 2rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 211, 105, 0.3);
 }
 
 .btn:hover {
   background-color: #fff;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(255, 211, 105, 0.4);
 }
 
 /* ---------- Footer ---------- */
 footer {
   text-align: center;
   padding: 2rem;
-  background: #1e1e2f;
-  color: #ccc;
+  background: #0f1a2b;
+  color: #b0b0b0;
   margin-top: 3rem;
   font-size: 0.9rem;
+  border-top: 2px solid #ffd369;
 }
+
 /* ---------- Case List Page ---------- */
 .case-list {
   padding: 4rem 2rem;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
 }
 
 .case-list h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.4rem;
   margin-bottom: 1rem;
+  color: #0f1a2b;
 }
 
 .case-list .intro {
   text-align: center;
   color: #555;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
 }
 
+/* ---------- Case Card ---------- */
 .case-card {
   background: #fff;
-  border-radius: 15px;
-  padding: 1.5rem 2rem;
-  margin-bottom: 1.8rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.case-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
 
 .case-card h3 {
-  color: #333;
-  margin-bottom: 0.5rem;
+  color: #2b2b2b;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
 }
 
 .case-card p {
   color: #666;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
 }
 
 .case-card .btn {
   display: inline-block;
   font-size: 0.95rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 40px;
+}
+
+/* ---------- Responsive Enhancements ---------- */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .case-card {
+    padding: 1.5rem;
+  }
 }
