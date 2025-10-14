@@ -26,21 +26,46 @@
       <a class="btn" href="cases.html">Explore Cases</a>
     </section>
 
-    <!-- ---------- Submit Your Case Section ---------- -->
-    <section class="submit-case">
-      <div class="container">
-        <h2>Submit Your Case</h2>
-        <p>Have a case study to share? Fill out the form below and let us showcase it!</p>
-        <form action="#" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <input type="text" name="title" placeholder="Case Title" required>
-          <textarea name="description" placeholder="Brief Description" rows="5" required></textarea>
-          <button type="submit" class="btn">Submit Case</button>
-        </form>
-      </div>
-    </section>
-  </main>
+  <form id="submitCaseForm">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <input type="text" name="title" placeholder="Case Title" required>
+  <textarea name="description" placeholder="Brief Description" rows="5" required></textarea>
+  <button type="submit" class="btn">Submit Case</button>
+</form>
+<p id="responseMsg" style="margin-top:1rem;"></p>
+
+<script>
+const form = document.getElementById("submitCaseForm");
+const responseMsg = document.getElementById("responseMsg");
+const SCRIPT_URL = "YOUR_WEB_APP_URL_HERE"; // replace with your Apps Script URL
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  const formData = new FormData(form);
+
+  fetch(SCRIPT_URL, {
+    method: "POST",
+    body: new URLSearchParams(formData)
+  })
+  .then(response => response.json())
+  .then(data => {
+    if(data.result === "success") {
+      responseMsg.textContent = "Case submitted successfully!";
+      responseMsg.style.color = "green";
+      form.reset();
+    } else {
+      responseMsg.textContent = "Error submitting case: " + data.error;
+      responseMsg.style.color = "red";
+    }
+  })
+  .catch(error => {
+    responseMsg.textContent = "Error submitting case. Try again.";
+    responseMsg.style.color = "red";
+    console.error(error);
+  });
+});
+</script>
 
   <!-- ---------- Footer ---------- -->
   <footer>
@@ -48,3 +73,4 @@
   </footer>
 </body>
 </html>
+
